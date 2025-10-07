@@ -65,18 +65,16 @@ cd restaurant-management-system
 
 ### 2. Cài đặt và chạy Backend
 
-| **npm**               | **yarn**           |
-| --------------------- | ------------------ |
-| `cd be`               | `cd be`            |
-| `npm install`         | `yarn install`     |
-| `npm run db:generate` | `yarn db:generate` |
-| `npm run db:migrate`  | `yarn db:migrate`  |
-| `npm run start:dev`   | `yarn start:dev`   |
-| `npm run build`       | `yarn build`       |
-| `npm run start:prod`  | `yarn start:prod`  |
+| **php**                     |                                 |
+| --------------------------- | ------------------------------- |
+| `cd be`                     | `# Cài đặt package PHP`         |
+| `composer install  `        | `# Tạo file config env`         |
+| `cp .env.example .env `     | `# Tạo file config env`         |
+| `php artisan key:generate`  | `# Tạo app key`                 |
+| `php artisan migrate `      | `# Chạy migration database`     |
+| `php artisan serve  `       | `# Khởi động server dev Laravel`|
 
 **Backend chạy trên:** `http://localhost:8000`  
-**Swagger API:** `http://localhost:8000/api`
 
 ### 3. Cài đặt và chạy Frontend
 
@@ -96,34 +94,35 @@ cd restaurant-management-system
 
 | **npm**         | **yarn**     | **Mô tả**                        |
 | --------------- | ------------ | -------------------------------- |
-| `npm run dev`   | `yarn dev`   | Development server với Turbopack |
+| `npm run dev`   | `yarn dev`   | Development server React         |
 | `npm run build` | `yarn build` | Build cho production             |
 | `npm start`     | `yarn start` | Chạy production server           |
 | `npm run lint`  | `yarn lint`  | Lint code với ESLint             |
 
 ### Backend
 
-| **npm**             | **yarn**         | **Mô tả**                  |
-| ------------------- | ---------------- | -------------------------- |
-| `npm run start:dev` | `yarn start:dev` | Development với hot reload |
-| `npm run start`     | `yarn start`     | Production mode            |
-| `npm run build`     | `yarn build`     | Build TypeScript           |
-| `npm run lint`      | `yarn lint`      | Lint code                  |
+| **npm**                   | **Mô tả**                     |
+|  -------------------      | --------------------------    |
+| `php artisan migrate`     | Chạy database migrations      |
+| `php artisan serve`       | Khởi động dev server Laravel  |
+| `php artisan config:cache`| Cache config cho production   |
+| `php artisan route:cache` | Cache route cho production    |
 
 ## 📱 Truy cập ứng dụng
 
 - **Frontend**: http://localhost:4300 (Giao diện người dùng)
-- **Backend API**: http://localhost:4301 (API endpoints)
-- **Swagger Documentation**: http://localhost:4301/api
+- **Backend API**: http://localhost:8000 (API endpoints)
 
 ## 🛣️ Routes
 
 - `/` → Trang chủ user
 - `/admin` → Admin dashboard
-- API endpoints: `/user/home`, `/admin/dashboard`, `/common/share`
+- API endpoints: `/user/home`, `/admin/dashboard`, `/common/share` (Laravel thường prefix API bằng /api)
 
 ## 📝 Ghi chú
 
-- **Ports**: Frontend (4300), Backend (4301)
+- **Ports**: Frontend (4300), Backend (8000)
 - **Package Manager**: Có thể dùng npm hoặc yarn (không trộn lẫn)
+- **Back End**: Dùng Composer & PHP artisan
+
 - **Development**: Yarn thường nhanh hơn và cache tốt hơn
