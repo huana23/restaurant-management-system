@@ -86,7 +86,7 @@ cd restaurant-management-system
 | `npm run build` | `yarn build`   |
 | `npm start`     | `yarn start`   |
 
-**Frontend chạy trên:** `http://localhost:4300`
+**Frontend chạy trên:** `http://localhost:3000`
 
 ## 🔧 Scripts chính
 
@@ -110,8 +110,8 @@ cd restaurant-management-system
 
 ## 📱 Truy cập ứng dụng
 
-- **Frontend**: http://localhost:4300 (Giao diện người dùng)
-- **Backend API**: http://localhost:8000 (API endpoints)
+- **Frontend**: http://localhost:3000 (Giao diện người dùng)
+- **Backend API**: http://localhost:8000
 
 ## 🛣️ Routes
 
@@ -121,7 +121,7 @@ cd restaurant-management-system
 
 ## 📝 Ghi chú
 
-- **Ports**: Frontend (4300), Backend (8000)
+- **Ports**: Frontend (3000), Backend (8000)
 - **Package Manager**: Có thể dùng npm hoặc yarn (không trộn lẫn)
 - **Back End**: Dùng Composer & PHP artisan
 
