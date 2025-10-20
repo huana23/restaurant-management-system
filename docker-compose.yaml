@@ -9,10 +9,15 @@ services:
       - "3000:3000"
     networks:
       - app-network
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules  
+    command: npm start
+    
 
   backend:
     build:
-      context: ./backend/
+      context: ./backend
       dockerfile: Dockerfile
     restart: unless-stopped
     environment:
