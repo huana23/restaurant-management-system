@@ -1,0 +1,69 @@
+@import '../../../../GlobalStyles/variables';
+@import '../../../../GlobalStyles/mixins';
+
+.user_option {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  .user_link {
+    color: $white;
+
+
+    &:hover {
+      color: $primary1;
+
+    }
+  }
+
+  .cart_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 17px;
+      height: auto;
+      fill: $white;
+      margin-bottom: 2px;
+    }
+
+    &:hover {
+
+      svg {
+        fill: $primary1;
+      }
+    }
+  }
+
+  .order_online {
+    @include hero_btn($primary1, $white, 8px, 30px, 45px);
+  }
+}
+
+.nav_search-btn {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0 !important;
+  border: none;
+  color: $white !important;
+  margin: 0 10px;
+
+  &:hover {
+    color: $primary1;
+  }
+}
+
+
+
+@media (max-width: $breakpoint-md) { 
+    .user_option{
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
