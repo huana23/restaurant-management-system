@@ -1,6 +1,8 @@
 import LandingPage from '../pages/Home'
 import Menu from '../pages/Menu'
 import BookTable from '../pages/BookTable'
+import About from '../pages/About'
+
 
 
 
@@ -8,6 +10,7 @@ import BookTable from '../pages/BookTable'
 const publicRoutes = [
     { path: '/', component: LandingPage},
     { path: '/menu', component: Menu},
+    { path: '/about', component: About},
     { path: '/booktable', component: BookTable, layout: null},
 
 
