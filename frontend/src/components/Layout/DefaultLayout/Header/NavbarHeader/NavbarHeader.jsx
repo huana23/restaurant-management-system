@@ -23,7 +23,7 @@ function NavbarHeader() {
                 </Link>
             </li>
             <li className={cx('nav-item')}>
-                <Link className={cx('nav-link')} to="/book">
+                <Link className={cx('nav-link')} to="/booktable">
                     Book Table
                 </Link>
             </li>

@@ -1,0 +1,59 @@
+@import '../../components/GlobalStyles/variables';
+@import '../../components/GlobalStyles/mixins';
+
+.book_section {
+  position: relative;
+
+  .heading_container {
+    margin-bottom: 25px;
+  }
+
+
+  .form_container {
+
+    .form-control {
+      width: 100%;
+      border: none;
+      height: 50px;
+      margin-bottom: 25px;
+      padding-left: 25px;
+      border: 1px solid #999;
+      outline: none;
+      color: $black;
+      border-radius: 5px;
+      outline: none;
+      box-shadow: none;
+
+      &::placeholder {
+        color: #222222;
+      }
+
+
+    }
+
+    .nice-select .current {
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 15px;
+      border: none;
+      text-transform: uppercase;
+      @include hero_btn($primary1, $white, 10px, 55px, 45px);
+    }
+  }
+
+  .map_container {
+    width: 100%;
+    height: 345px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    #googleMap {
+      height: 100%;
+      min-height: 100%;
+      width: 100%;
+    }
+  }
+
+}
