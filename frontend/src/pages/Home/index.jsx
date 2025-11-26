@@ -1,5 +1,26 @@
+import SectionOffer from "./SectionOffer";
+import SectionFood from "./SectionFood";
+import SectionAbout from "./SectionAbout";
+import SectionBook from "./SectionBook";
+import SectionClient from "./SectionClient";
+
+
+
+
+
 function LandingPage() {
-    return <h1>Home</h1>;
+    return (
+        <div>
+            <SectionOffer />
+            <SectionFood />
+            <SectionAbout />
+            <SectionBook />
+            <SectionClient />
+
+
+        </div>
+    );
 }
+
 
 export default LandingPage;
