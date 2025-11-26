@@ -1,0 +1,36 @@
+@import '../../components/GlobalStyles/variables';
+@import '../../components/GlobalStyles/mixins';
+
+.about_section {
+  background: $primary2;
+  color: $white;
+
+  .row {
+    align-items: center;
+  }
+
+  .img-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 445px;
+      position: relative;
+      z-index: 2;
+    }
+
+  }
+
+  .detail-box {
+    p {
+      margin-top: 15px;
+    }
+
+    a {
+      @include hero_btn($primary1, $white, 10px, 45px, 45px);
+      margin-top: 15px;
+    }
+  }
+}
