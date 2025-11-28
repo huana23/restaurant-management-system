@@ -7,7 +7,7 @@
 Restaurant management system là một ứng dụng web fullstack được xây dựng để hệ thống quản lí nhà hàng:
 
 - **Frontend**: ReactJs, Tailwind CSS + SCSS
-- **Backend**: Laravel
+- **Backend**: NodeJS + Express
 - **Features**: Server-Side Rendering, SEO-optimized
 
 ## 📁 Cấu trúc dự án
