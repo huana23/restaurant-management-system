@@ -7,7 +7,7 @@
 Restaurant management system là một ứng dụng web fullstack được xây dựng để hệ thống quản lí nhà hàng:
 
 - **Frontend**: ReactJs, Tailwind CSS + SCSS
-- **Backend**: LaravelNodeJS + Express
+- **Backend**: Laravel
 - **Features**: Server-Side Rendering, SEO-optimized
 
 ## 📁 Cấu trúc dự án
@@ -25,32 +25,37 @@ restaurant-management-system/
 │   ├── postcss.config.js      # Cấu hình PostCSS
 │   └── package.json           # Cấu hình project React
 │
-└── be/                        # Backend - NodeJS + Express
-    ├── src/
-    │   ├── controllers/       # Controllers xử lý request
-    │   ├── models/            # Models tương tác CSDL
-    │   ├── routes/            # API routes
-    │   ├── middleware/        # Middleware (Auth, ErrorHandler,...)
-    │   ├── config/            # Config DB, env
-    │   └── app.js             # Express application
-    ├── .env                   # Biến môi trường (DB, JWT,...)
-    └── package.json           # Cấu hình NodeJS project
-
+└── be/                        # Backend - Laravel
+    ├── app/
+    │   ├── Http/Controllers/  # Controllers xử lý request
+    │   ├── Models/            # Models tương tác CSDL
+    │   └── Services/          # (tuỳ chọn) Business logic
+    ├── routes/
+    │   └── api.php            # API routes
+    ├── database/
+    │   ├── migrations/        # Tạo bảng DB
+    │   └── seeders/           # Dữ liệu mẫu
+    ├── .env                   # Biến môi trường (CSDL, mail,...)
+    └── composer.json          # Cấu hình Laravel project
 
 ```
 
 ## 🛠️ Yêu cầu hệ thống
 
 🔧 Yêu cầu cho Frontend (ReactJS)
-Node.js: >= 16.x
-npm: >= 8.x hoặc yarn: >= 1.22.
-Trình duyệt: Chrome, Edge hoặc Firefox mới nhất (để kiểm thử)
 
-🔧 Yêu cầu cho Backend (NodeJS + Express)
-Node.js: >= 18.x
-npm: >= 9.x
+Node.js: >= 16.x
+
+npm: >= 8.x hoặc yarn >= 1.22
+
+Trình duyệt: Chrome, Edge hoặc Firefox mới nhất
+
+🔧 Yêu cầu cho Backend (Laravel)
+PHP: >= 8.1
+Composer: >= 2.x
 MySQL: >= 5.7 hoặc PostgreSQL >= 12
-ORM: Sequelize hoặc Prisma (tuỳ chọn)
+Laravel CLI (tuỳ chọn): để hỗ trợ artisan commands
+Apache hoặc Laravel Valet, XAMPP, hoặc Laravel Sail (nếu dùng Docker)
 
 ## 🚀 Hướng dẫn cài đặt và chạy dự án
 
@@ -63,14 +68,14 @@ cd restaurant-management-system
 
 ### 2. Cài đặt và chạy Backend
 
-| **node**               |                                  |
-| ---------------------- | -------------------------------- |
-| `cd be`                | `# Di chuyển vào backend`        |
-| `npm install`          | `# Cài đặt package NodeJS`       |
-| `cp .env.example .env` | `# Tạo file config môi trường`   |
-| `npm run migrate`      | `# Chạy migration database`      |
-| `npm run dev`          | `# Khởi động server dev Express` |
-
+| **php**                     |                                 |
+| --------------------------- | ------------------------------- |
+| `cd be`                     | `# Cài đặt package PHP`         |
+| `composer install  `        | `# Tạo file config env`         |
+| `cp .env.example .env `     | `# Tạo file config env`         |
+| `php artisan key:generate`  | `# Tạo app key`                 |
+| `php artisan migrate `      | `# Chạy migration database`     |
+| `php artisan serve  `       | `# Khởi động server dev Laravel`|
 
 **Backend chạy trên:** `http://localhost:8000`  
 
@@ -99,13 +104,12 @@ cd restaurant-management-system
 
 ### Backend
 
-| **npm**           | **Mô tả**                    |
-| ----------------- | ---------------------------- |
-| `npm run migrate` | Chạy database migrations     |
-| `npm run dev`     | Khởi động dev server Express |
-| `npm run seed`    | Seed dữ liệu mẫu (tuỳ chọn)  |
-| `npm run start`   | Chạy production server       |
-
+| **npm**                   | **Mô tả**                     |
+|  -------------------      | --------------------------    |
+| `php artisan migrate`     | Chạy database migrations      |
+| `php artisan serve`       | Khởi động dev server Laravel  |
+| `php artisan config:cache`| Cache config cho production   |
+| `php artisan route:cache` | Cache route cho production    |
 
 ## 📱 Truy cập ứng dụng
 
@@ -116,12 +120,12 @@ cd restaurant-management-system
 
 - `/` → Trang chủ user
 - `/admin` → Admin dashboard
-- API endpoints: `/user/home`, `/admin/dashboard`, `/common/share` (Express thường prefix API bằng /api)
+- API endpoints: `/user/home`, `/admin/dashboard`, `/common/share` (Laravel thường prefix API bằng /api)
 
 ## 📝 Ghi chú
 
 - **Ports**: Frontend (3000), Backend (8000)
 - **Package Manager**: Có thể dùng npm hoặc yarn (không trộn lẫn)
-- **Back End**: Dùng NodeJS + Express
+- **Back End**: Dùng Composer & PHP artisan
 
 - **Development**: Yarn thường nhanh hơn và cache tốt hơn
