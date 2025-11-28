@@ -1,0 +1,19 @@
+@import '../../components/GlobalStyles/variables';
+@import '../../components/GlobalStyles/mixins';
+
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, #eef6ff, white);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
